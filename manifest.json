@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "Kijiji Reposter Pro",
+  "version": "1.0.0",
+  "description": "Enhanced Kijiji reposting with no limits and extended delays",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "tabs"
+  ],
+  "host_permissions": [
+    "*://*.kijiji.ca/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*.kijiji.ca/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_end"
+    },
+    {
+      "matches": ["*://*.kijiji.ca/p-edit-ad.html*"],
+      "js": ["edit-content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Kijiji Reposter Pro"
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}

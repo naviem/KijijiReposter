@@ -1,0 +1,472 @@
+/* Kijiji Reposter Pro - Styles */
+
+/* Repost Buttons */
+.repost-pro-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.repost-pro-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.repost-pro-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.repost-pro-btn.enhanced {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    font-size: 16px;
+    padding: 12px 24px;
+}
+
+.similar-btn {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+/* Batch Repost Section */
+.batch-repost-section {
+    position: fixed !important;
+    top: 120px !important; /* Moved down further to avoid any overlap */
+    right: 20px !important;
+    background: white !important;
+    border: 2px solid #3498db !important;
+    border-radius: 12px !important;
+    padding: 20px !important;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15) !important;
+    z-index: 99999 !important; /* Maximum z-index to ensure it's on top */
+    min-width: 280px !important;
+    max-width: 320px !important;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+/* Ensure repost controls are properly positioned */
+.repost-controls {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    margin: 8px 0 !important;
+    padding: 8px !important;
+    background: #f8f9fa !important;
+    border-radius: 4px !important;
+    border: 1px solid #e9ecef !important;
+    position: relative !important;
+    z-index: 1000 !important;
+}
+
+/* Ensure history modal is properly centered */
+.history-modal {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background: rgba(0,0,0,0.7) !important;
+    z-index: 100000 !important; /* Maximum z-index */
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    backdrop-filter: blur(4px) !important;
+}
+
+.repost-batch-section {
+    background: white;
+    border: 2px solid #667eea;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.repost-batch-section h3 {
+    color: #667eea;
+    margin: 0 0 15px 0;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.batch-controls {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.batch-status {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 6px;
+    background: #f8f9fa;
+    border-left: 4px solid #667eea;
+}
+
+/* Floating Repost Button */
+.floating-repost-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    z-index: 10000;
+}
+
+.floating-repost-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+}
+
+/* Repost Menu */
+.repost-menu {
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    overflow: hidden;
+    z-index: 10001;
+    min-width: 200px;
+}
+
+.menu-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 15px 20px;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.menu-item {
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.menu-item:hover {
+    background: #f8f9fa;
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+}
+
+/* Modal */
+.repost-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10002;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+
+.modal-content h3 {
+    color: #667eea;
+    margin: 0 0 20px 0;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.setting {
+    margin-bottom: 20px;
+}
+
+.setting label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+.setting input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.setting input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.modal-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.modal-buttons button:first-child {
+    background: #667eea;
+    color: white;
+}
+
+.modal-buttons button:last-child {
+    background: #f0f0f0;
+    color: #333;
+}
+
+.modal-buttons button:hover {
+    transform: translateY(-2px);
+}
+
+/* Checkboxes */
+.repost-checkbox {
+    accent-color: #667eea;
+    cursor: pointer;
+}
+
+.repost-checkbox:checked {
+    background-color: #667eea;
+    border-color: #667eea;
+}
+
+/* Post Similar Button */
+.post-similar-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-right: 8px;
+}
+
+.post-similar-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+/* Notifications */
+.repost-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    z-index: 10003;
+    max-width: 300px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    animation: slideIn 0.3s ease;
+}
+
+.repost-notification.info {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.repost-notification.success {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+}
+
+.repost-notification.warning {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+
+.repost-notification.error {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .floating-repost-btn {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+    
+    .repost-menu {
+        bottom: 80px;
+        right: 20px;
+        min-width: 180px;
+    }
+    
+    .batch-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .repost-pro-btn {
+        width: 100%;
+        margin: 4px 0;
+    }
+    
+    .repost-notification {
+        right: 10px;
+        left: 10px;
+        max-width: none;
+    }
+}
+
+/* History Modal */
+.history-modal {
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.history-list {
+    max-height: 400px;
+    overflow-y: auto;
+    margin: 20px 0;
+}
+
+.history-item {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 10px;
+    background: #f8f9fa;
+}
+
+.history-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.history-date {
+    font-size: 12px;
+    color: #666;
+}
+
+.history-item-details {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.history-price {
+    color: #28a745;
+    font-weight: 600;
+}
+
+.history-category {
+    color: #666;
+}
+
+.history-item-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.history-item-actions .repost-btn {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.history-item-actions .delete-btn {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .repost-batch-section,
+    .modal-content,
+    .repost-menu {
+        background: #2d3748;
+        color: white;
+    }
+    
+    .setting input {
+        background: #4a5568;
+        border-color: #718096;
+        color: white;
+    }
+    
+    .menu-item {
+        border-bottom-color: #4a5568;
+    }
+    
+    .menu-item:hover {
+        background: #4a5568;
+    }
+    
+    .history-item {
+        background: #4a5568;
+        border-color: #718096;
+    }
+    
+    .history-date,
+    .history-category {
+        color: #a0aec0;
+    }
+}
